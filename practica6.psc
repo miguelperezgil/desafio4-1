@@ -1,8 +1,9 @@
 Algoritmo sin_titulo
+	//Definiciones
 	definir precio,tasa_cambio,precio_en_tasa,sub_total como real
 	definir monto_iva,monto_descuento,billetes,monto_total Como Real
 	definir cantidad,porc_descuento como entero
-	
+	//Entradas
 	mostrar "Introduzca el precio en $ del producto que va a comprar:"
 	leer precio
 	mostrar "Introduzca la cantidad de unidades que va a comprar:"
@@ -17,13 +18,13 @@ Algoritmo sin_titulo
 	mostrar "Introduzca el porcentaje de descuento "
 	mostrar "Nota: 0 si no hay descuento, 100 si no pagara nada:"
 	leer porc_descuento
-	
+	//Procesos
 	sub_total <- precio*cantidad
 	monto_descuento <- sub_total*porc_descuento/100
 	sub_total_menos_descuento <- sub_total-monto_descuento
 	monto_iva <- sub_total_menos_descuento*0.16
 	monto_total <- sub_total_menos_descuento+monto_iva
-	
+	//Salidas
 	mostrar "El sub total a pagar es " sub_total "$ o " precio_en_tasa*cantidad " bs"
 	mostrar "El porcentaje de descuento es " porc_descuento "% que equivale son " 
 	mostrar monto_descuento "$"
